@@ -1,9 +1,10 @@
-if (window.screen.width < 768) {
-
-  function renderItems(collection) {
-    //   console.log(collection.typefaces);
+console.log(window.innerWidth);
+function renderItems(collection) {
+  //   console.log(collection.typefaces);
+  if (window.innerWidth < 768) {
+    console.log("Mobile Script");
     collection.typefaces.forEach((element) => {
-      console.log(":{", element.style.width);
+      console.log(":{", element);
       let collectionContainer = document.getElementById("collectionContainer");
 
       let typefaces = `
@@ -33,61 +34,8 @@ if (window.screen.width < 768) {
 
       collectionContainer.insertAdjacentHTML("beforeend", typefaces);
     });
-  }
-
-  fetch("assets/fonts-in-use.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (collection) {
-      // And passes the data to the function, above!
-      renderItems(collection); // In reverse order
-    });
-
-  let btn = document.querySelectorAll(".filter-btn");
-  btn.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      console.log("clicked", event.target.dataset.country);
-      btn.classList.toggle("button-clicked");
-
-      document.querySelectorAll('.typeface-visual').forEach(item => {
-        item.classList.remove("filter-hide");
-        item.classList.add("filter-show")
-      })
-
-      //write code to remove clicked class from other buttons
-
-      document.querySelectorAll(".typeface-visual").forEach(function (item) {
-        if (event.target.dataset.filter == "style") {
-          if (event.target.dataset.style == item.dataset.style) {
-            console.log(";{", item)
-            item.classList.add("filter-show")
-          }
-          else {
-            item.classList.add("filter-hide")
-          }
-        }
-      });
-    });
-  });
-
-  resetBtn = document.getElementById("reset");
-  resetBtn.addEventListener("click", function (event) {
-    document.querySelectorAll(".filter-btn").forEach(item => {
-      console.log(">.<", item)
-    })
-    document.querySelectorAll(".typeface-visual").forEach(item => {
-      item.classList.remove("filter-hide");
-      item.classList.add("filter-show")
-    })
-  })
-  // Your ios code here for mobile
-}
-
-else {
-
-  function renderItems(collection) {
-    //   console.log(collection.typefaces);
+  } else {
+    console.log("Desktop Script");
     collection.typefaces.forEach((element) => {
       console.log(":{", element);
       let collectionContainer = document.getElementById("collectionContainer");
@@ -118,62 +66,60 @@ else {
       collectionContainer.insertAdjacentHTML("beforeend", typefaces);
     });
   }
+}
 
-  let btn = document.querySelectorAll(".filter-btn");
-  btn.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      console.log("clicked", event.target.dataset.country);
-      btn.classList.toggle("button-clicked");
+let btn = document.querySelectorAll(".filter-btn");
+btn.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    console.log("clicked", event.target.dataset.country);
+    btn.classList.toggle("button-clicked");
 
-      document.querySelectorAll('.typeface-visual').forEach(item => {
-        item.classList.remove("filter-hide");
-        item.classList.add("filter-show")
-      })
-
-      //write code to remove clicked class from other buttons
-
-      document.querySelectorAll(".typeface-visual").forEach(function (item) {
-        if (event.target.dataset.filter == "style") {
-          if (event.target.dataset.style == item.dataset.style) {
-            console.log(";{", item)
-            item.classList.add("filter-show")
-          }
-          else {
-            item.classList.add("filter-hide")
-          }
-        } else if (event.target.dataset.filter == "country") {
-          if (event.target.dataset.country == item.dataset.country) {
-            console.log(";{", item)
-            item.classList.add("filter-show")
-          }
-          else {
-            item.classList.add("filter-hide")
-          }
-        }
-      });
-    });
-  });
-
-  resetBtn = document.getElementById("reset");
-  resetBtn.addEventListener("click", function (event) {
-    document.querySelectorAll(".filter-btn").forEach(item => {
-      console.log(">.<", item)
-      item.classList.remove("button-clicked")
-    })
-    document.querySelectorAll(".typeface-visual").forEach(item => {
+    document.querySelectorAll('.typeface-visual').forEach(item => {
       item.classList.remove("filter-hide");
       item.classList.add("filter-show")
     })
-  })
 
-  fetch("assets/fonts-in-use.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (collection) {
-      // And passes the data to the function, above!
-      renderItems(collection); // In reverse order
+    //write code to remove clicked class from other buttons
+
+    document.querySelectorAll(".typeface-visual").forEach(function (item) {
+      if (event.target.dataset.filter == "style") {
+        if (event.target.dataset.style == item.dataset.style) {
+          console.log(";{", item)
+          item.classList.add("filter-show")
+        }
+        else {
+          item.classList.add("filter-hide")
+        }
+      } else if (event.target.dataset.filter == "country") {
+        if (event.target.dataset.country == item.dataset.country) {
+          console.log(";{", item)
+          item.classList.add("filter-show")
+        }
+        else {
+          item.classList.add("filter-hide")
+        }
+      }
     });
+  });
+});
 
-}
+resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", function (event) {
+  document.querySelectorAll(".filter-btn").forEach(item => {
+    console.log(">.<", item)
+    item.classList.remove("button-clicked")
+  })
+  document.querySelectorAll(".typeface-visual").forEach(item => {
+    item.classList.remove("filter-hide");
+    item.classList.add("filter-show")
+  })
+});
 
+fetch("assets/fonts-in-use.json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (collection) {
+    // And passes the data to the function, above!
+    renderItems(collection); // In reverse order
+  });

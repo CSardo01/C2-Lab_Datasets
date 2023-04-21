@@ -1,0 +1,184 @@
+html {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14pt;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  background-color: #eeebe7;
+}
+
+header {
+  width: calc(100% - 8rem);
+  gap: 1em;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  left: 4rem;
+  top: 4rem;
+}
+
+h1 {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: -1pt;
+  margin-bottom: 1rem;
+}
+
+.body-copy {
+  font-family: input-mono-narrow, monospace;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 0.75rem;
+  width: 50ch;
+}
+
+em {
+  font-family: utopia-std, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1:hover {
+  font-family: utopia-std, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+h1:hover em {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h2 {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  justify-content: end;
+}
+.rule {
+  background-color: black;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+button {
+  height: fit-content;
+  font-family: utopia-std, serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-style: italic;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid black;
+  transition: all 200ms ease-in-out;
+}
+button:hover {
+  font-family: utopia-std, serif;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+}
+.button-clicked {
+  font-family: utopia-std, serif;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: end;
+  margin-left: 4rem;
+  padding-bottom: 4rem;
+}
+
+.collection-container {
+  display: flex;
+  gap: 0.25rem;
+  width: 100%;
+  height: 50%;
+  padding-right: 4rem;
+  flex-wrap: nowrap;
+}
+
+.typeface-visual {
+  position: relative;
+  font-family: 0.5rem;
+  background-color: #ffffff;
+
+  border: 1px solid black;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  transition: all 400ms ease-in-out;
+  height: 100%;
+  flex-basis: auto;
+  overflow: hidden;
+}
+.typeface-visual:hover {
+  transform: translateY(-20px);
+  z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
+  box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.2);
+  /* border-radius: 0 0 24px 0px; */
+}
+.typeface-data {
+  position: absolute;
+  padding: 1rem;
+  border: 1px solid black;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+  top: 1rem;
+  left: 1rem;
+  /* transform: translateX(-50%); */
+  opacity: 0;
+  background-color: #ffffff;
+  transition: opacity 200ms ease-in-out;
+  width: 20ch;
+}
+.typeface-visual:hover .typeface-data {
+  opacity: 1;
+}
+.typeface-img {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 200ms ease-in-out;
+}
+.typeface-visual:hover .typeface-img {
+  opacity: 1;
+}
+.tag {
+  font-family: input-mono-narrow, monospace;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.filter-show {
+  display: block;
+}
+
+.filter-hide {
+  display: none;
+}

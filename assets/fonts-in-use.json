@@ -1,0 +1,279 @@
+{
+  "typefaces": [
+    {
+      "name": "Helvetica",
+      "style": "Sans-serif",
+      "designer": "Max Miedinger",
+      "country": "Switzerland",
+      "year": "1957",
+      "rankYear": "17",
+      "number": "1016",
+      "rank": "1",
+      "img": "./assets/Images/Helvetica_1.jpeg"
+    },
+    {
+      "name": "Futura",
+      "style": "Sans-serif",
+      "designer": "Paul Renner",
+      "country": "Germany",
+      "year": "1927",
+      "rankYear": "10",
+      "number": "940",
+      "rank": "2",
+      "img": "./assets/Images/Futura_1.jpeg"
+    },
+    {
+      "name": "Univers",
+      "style": "Sans-serif",
+      "designer": "Adrian Fruitiger",
+      "country": "Switzerland",
+      "year": "1957",
+      "rankYear": "16",
+      "number": "490",
+      "rank": "3",
+      "img": "./assets/Images/Univers_1.jpeg"
+    },
+    {
+      "name": "Akzidenz-Grotesk",
+      "style": "Sans-serif",
+      "designer": "Hermann Berthold",
+      "country": "Germany",
+      "year": "1896",
+      "rankYear": "8",
+      "number": "399",
+      "rank": "4",
+      "img": "./assets/Images/AkzidenzGrotesk_1.jpeg"
+    },
+    {
+      "name": "Gill Sans",
+      "style": "Sans-serif",
+      "designer": "Eric Gill",
+      "country": "England",
+      "year": "1926",
+      "rankYear": "9",
+      "number": "262",
+      "rank": "5",
+      "img": "./assets/Images/GillSans_1.jpeg"
+    },
+    {
+      "name": "Gotham",
+      "style": "Sans-serif",
+      "designer": "Tobias Frere-Jones",
+      "country": "United States",
+      "year": "2000",
+      "rankYear": "24",
+      "number": "254",
+      "rank": "6",
+      "img": "./assets/Images/Gotham_1.jpeg"
+    },
+    {
+      "name": "ITC Avant Garde Gothic",
+      "style": "Sans-serif",
+      "designer": "Herb Lubalin",
+      "country": "United States",
+      "year": "1970",
+      "rankYear": "19",
+      "number": "250",
+      "rank": "7",
+      "img": "./assets/Images/ITCAvantGardeGothic_1.jpeg"
+    },
+    {
+      "name": "Bodoni",
+      "style": "Serif",
+      "designer": "Giambattista Bodoni",
+      "country": "Italy",
+      "year": "1798",
+      "rankYear": "6",
+      "number": "222",
+      "rank": "8",
+      "img": "./assets/Images/Bodoni_1.jpeg"
+    },
+    {
+      "name": "Times New Roman",
+      "style": "Serif",
+      "designer": "Victor Lardent",
+      "country": "England",
+      "year": "1931",
+      "rankYear": "11",
+      "number": "218",
+      "rank": "9",
+      "img": "./assets/Images/TimesNewRoman_1.jpeg"
+    },
+    {
+      "name": "DIN",
+      "style": "Sans-serif",
+      "designer": "Deutsches Institut für Normung",
+      "country": "Germany",
+      "year": "1931",
+      "rankYear": "12",
+      "number": "176",
+      "rank": "10",
+      "img": "./assets/Images/Din_1.jpeg"
+    },
+    {
+      "name": "Caslon",
+      "style": "Serif",
+      "designer": "William Caslon",
+      "country": "England",
+      "year": "1722",
+      "rankYear": "3",
+      "number": "170",
+      "rank": "11",
+      "img": "./assets/Images/Caslon_1.jpeg"
+    },
+    {
+      "name": "Trade Gothic",
+      "style": "Sans-serif",
+      "designer": "Jackson Burke",
+      "country": "United States",
+      "year": "1948",
+      "rankYear": "15",
+      "number": "157",
+      "rank": "12",
+      "img": "./assets/Images/TradeGothic_1.jpeg"
+    },
+    {
+      "name": "Garamond",
+      "style": "Serif",
+      "designer": "Claude Garamond",
+      "country": "France",
+      "year": "1530",
+      "rankYear": "2",
+      "number": "153",
+      "rank": "13",
+      "img": "./assets/Images/Garamond_1.jpeg"
+    },
+    {
+      "name": "Clarendon",
+      "style": "Serif",
+      "designer": "Robert Besley",
+      "country": "England",
+      "year": "1845",
+      "rankYear": "7",
+      "number": "144",
+      "rank": "14",
+      "img": "./assets/Images/clarendon_1.jpeg"
+    },
+    {
+      "name": "Baskerville",
+      "style": "Serif",
+      "designer": "John Baskerville",
+      "country": "England",
+      "year": "1757",
+      "rankYear": "4",
+      "number": "141",
+      "rank": "15",
+      "img": "./assets/Images/Baskerville_1.jpeg"
+    },
+    {
+      "name": "Proxima Nova",
+      "style": "Sans-serif",
+      "designer": "Mark Simonson",
+      "country": "United States",
+      "year": "2005",
+      "rankYear": "25",
+      "number": "105",
+      "rank": "16",
+      "img": "./assets/Images/ProximaNova_1.jpeg"
+    },
+    {
+      "name": "Palatino",
+      "style": "Serif",
+      "designer": "Hermann Zapf",
+      "country": "Germany",
+      "year": "1948",
+      "rankYear": "14",
+      "number": "73",
+      "rank": "17",
+      "img": "./assets/Images/Palantino_1.jpeg"
+    },
+    {
+      "name": "ITC Franklin Gothic",
+      "style": "Sans-serif",
+      "designer": "Morris Fuller Benton",
+      "country": "United States",
+      "year": "1991",
+      "rankYear": "21",
+      "number": "70",
+      "rank": "18",
+      "img": "./assets/Images/FranklinGothic_1.jpeg"
+    },
+    {
+      "name": "Didot",
+      "style": "Serif",
+      "designer": "Firmin Didot",
+      "country": "France",
+      "year": "1784",
+      "rankYear": "5",
+      "number": "62",
+      "rank": "19",
+      "img": "./assets/Images/Didot_1.jpeg"
+    },
+    {
+      "name": "Meta",
+      "style": "Sans-serif",
+      "designer": "Erik Spiekermann",
+      "country": "Germany",
+      "year": "1991",
+      "rankYear": "22",
+      "number": "58",
+      "rank": "20",
+      "img": "./assets/Images/Meta_1.jpeg"
+    },
+    {
+      "name": "Sabon",
+      "style": "Serif",
+      "designer": "Jan Tschichold",
+      "country": "Germany",
+      "year": "1964",
+      "rankYear": "18",
+      "number": "54",
+      "rank": "21",
+      "img": "./assets/Images/Sabon_1.jpeg"
+    },
+    {
+      "name": "Rockwell",
+      "style": "Serif",
+      "designer": "Frank H. Pierpont",
+      "country": "United States",
+      "year": "1934",
+      "rankYear": "13",
+      "number": "46",
+      "rank": "22",
+      "img": "./assets/Images/Rockwell_1.jpeg"
+    },
+    {
+      "name": "Myriad",
+      "style": "Sans-serif",
+      "designer": "Robert Slimbach and Carol Twombly",
+      "country": "United States",
+      "year": "1992",
+      "rankYear": "23",
+      "number": "41",
+      "rank": "23",
+      "img": "./assets/Images/Myriad_1.jpeg"
+    },
+    {
+      "name": "Frutiger",
+      "style": "Sans-serif",
+      "designer": "Adrian Frutiger",
+      "country": "Switzerland",
+      "year": "1975",
+      "rankYear": "20",
+      "number": "38",
+      "rank": "24",
+      "img": "./assets/Images/Frutiger_1.jpeg"
+    },
+    {
+      "name": "Bembo",
+      "style": "Serif",
+      "designer": "Francesco Griffo",
+      "country": "Italy",
+      "year": "1495",
+      "rankYear": "1",
+      "number": "32",
+      "rank": "25",
+      "img": "./assets/Images/Bembo_1.jpeg"
+    }
+  ]
+}

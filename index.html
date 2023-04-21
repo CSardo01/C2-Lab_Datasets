@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Typeface Data</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./assets/reset.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.typekit.net/jxm3ssa.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <script defer src="./data.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="intro">
+      <h1><em>Influential</em> Type</h1>
+      <p class="body-copy">
+        These boxes display the most popular fonts of all time. The width of each box indicates the font's prevalence,
+        while the
+        height represents its creation date. The older the typeface, the taller the box. Simply hover over a box to
+        learn more
+        about each font.
+      </p>
+    </div>
+    <nav>
+      <div class="column one">
+        <div class="button-container">
+          <button id="serif" class="filter-btn" data-filter="style" data-style="Serif">
+            Serif
+          </button>
+          <button id="sansSerif" class="filter-btn" data-filter="style" data-style="Sans-serif">
+            Sans-serif
+          </button>
+        </div>
+        <div class="rule"></div>
+        <div class="button-container">
+          <button id="switzerland" class="filter-btn" data-filter="country" data-country="Switzerland">
+            Swiss
+          </button>
+          <button id="germany" class="filter-btn" data-filter="country" data-country="Germany">
+            Germany
+          </button>
+          <button id="italy" class="filter-btn" data-filter="country" data-country="Italy">
+            Italy
+          </button>
+          <button id="france" class="filter-btn" data-filter="country" data-country="France">
+            France
+          </button>
+          <button id="england" class="filter-btn" data-filter="country" data-country="England">
+            England
+          </button>
+          <button id="unitedStates" class="filter-btn" data-filter="country" data-country="United States">
+            United States
+          </button>
+        </div>
+      </div>
+      <div class="coulumn two">
+        <button id="reset" class="reset">
+          Show <br>All
+        </button>
+      </div>
+      <!-- <button id="switzerland" class="filter-btn" data-filter="country" data-country="Switzerland">
+        Swiss
+      </button>
+      <button id="germany" class="filter-btn" data-country="Germany">
+        German
+      </button>
+      <button id="england" class="filter-btn" data-country="England">
+        United Kingdom
+      </button>
+      <button id="unitedStates" class="filter-btn" data-country="United States">
+        United States
+      </button> -->
+    </nav>
+  </header>
+  <main>
+    <div id="collectionContainer" class="collection-container"></div>
+  </main>
+</body>
+
+</html>

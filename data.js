@@ -1,8 +1,14 @@
+
 console.log(window.innerWidth);
+
+
 function renderItems(collection) {
   //   console.log(collection.typefaces);
   if (window.innerWidth < 768) {
     console.log("Mobile Script");
+    document.getElementById("statement").innerHTML = "Howdy! These boxes display the most popular typefaces of all time. The height of each box indicates the font's prevalence, while the width represents its creation date.The older the typeface, the taller the box. Simply click over a box to learn more about each typeface!"
+
+
     collection.typefaces.forEach((element) => {
       console.log(":{", element);
       let collectionContainer = document.getElementById("collectionContainer");
@@ -11,20 +17,17 @@ function renderItems(collection) {
     <div class="typeface-visual" 
     data-style="${element.style}"
     data-country="${element.country}"
-    style="
-    height: ${(element.number / 5564) * 300}%; 
-    width: ${(50 - element.rankYear) * 2}%;
-    
-    
-    ">
+    style="height: ${(element.number / 5564) * 300}%; width: ${(50 - element.rankYear) * 2}%;">
+
     <img class="typeface-img" src="${element.img}">
+
     <div class="typeface-data">
-    <h2 class="typeface-name">${element.name}</h2>
-    <p class="typeface-type tag">${element.style}</p>
-    <p class="typeface-designer tag">${element.designer}</p>
-    <p class="typeface-country tag">${element.country}</p>
-    <p class="typeface-year tag">${element.year}</p>
-    <p class="typeface-works tag">${element.number} works on Fonts in Use.</p>
+      <h2 class="typeface-name">${element.name}</h2>
+      <p class="typeface-type tag">${element.style}</p>
+      <p class="typeface-designer tag">${element.designer}</p>
+      <p class="typeface-country tag">${element.country}</p>
+      <p class="typeface-year tag">${element.year}</p>
+      <p class="typeface-works tag">${element.number} works on Fonts in Use.</p>
     </div>
     </div>`;
       //border: ${element.rankYear * 0.1}px solid black;
@@ -33,29 +36,30 @@ function renderItems(collection) {
       //style="width: ${(element.number / 5564) * 100}%;"
 
       collectionContainer.insertAdjacentHTML("beforeend", typefaces);
+
     });
-  } else {
+
+  }
+  else {
     console.log("Desktop Script");
+
     collection.typefaces.forEach((element) => {
       console.log(":{", element);
       let collectionContainer = document.getElementById("collectionContainer");
 
       let typefaces = `
     <div class="typeface-visual" 
-    data-style="${element.style}"
-    data-country="${element.country}"
-    style="
-    width: ${(element.number / 5564) * 100}%; 
-    height: ${(50 - element.rankYear) * 2}%;
-    ">
+      data-style="${element.style}"
+      data-country="${element.country}"
+      style="width: ${(element.number / 5564) * 100}%; height: ${(50 - element.rankYear) * 2}%;">
     <img class="typeface-img" src="${element.img}">
     <div class="typeface-data">
-    <h2 class="typeface-name">${element.name}</h2>
-    <p class="typeface-type tag">${element.style}</p>
-    <p class="typeface-designer tag">${element.designer}</p>
-    <p class="typeface-country tag">${element.country}</p>
-    <p class="typeface-year tag">${element.year}</p>
-    <p class="typeface-works tag">${element.number} works on Fonts in Use.</p>
+      <h2 class="typeface-name">${element.name}</h2>
+      <p class="typeface-type tag">${element.style}</p>
+      <p class="typeface-designer tag">${element.designer}</p>
+      <p class="typeface-country tag">${element.country}</p>
+      <p class="typeface-year tag">${element.year}</p>
+      <p class="typeface-works tag">${element.number} works on Fonts in Use.</p>
     </div>
     </div>`;
       //border: ${element.rankYear * 0.1}px solid black;
@@ -115,6 +119,43 @@ resetBtn.addEventListener("click", function (event) {
   })
 });
 
+var slider = document.getElementById("myRange");
+var collectionContainer = document.getElementById("collectionContainer")
+console.log(collectionContainer.style.width);
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function () {
+  output = this.value
+  console.log(output + "%")
+  // console.log((this.value), "%");
+  collectionContainer.style.width = (output + "%")
+  // console.log(collectionContainer.style.width);
+}
+
+const drager = document.querySelector('.collection-overflow-container');
+let mouseDown = false;
+let startX, scrollLeft;
+
+let startDragging = function (e) {
+  mouseDown = true;
+  startX = e.pageX - drager.offsetLeft;
+  scrollLeft = drager.scrollLeft;
+};
+let stopDragging = function (event) {
+  mouseDown = false;
+};
+
+drager.addEventListener('mousemove', (e) => {
+  e.preventDefault();
+  if (!mouseDown) { return; }
+  const x = e.pageX - drager.offsetLeft;
+  const scroll = x - startX;
+  drager.scrollLeft = scrollLeft - scroll;
+});
+
+// Add the event listeners
+drager.addEventListener('mousedown', startDragging, false);
+drager.addEventListener('mouseup', stopDragging, false);
+drager.addEventListener('mouseleave', stopDragging, false);
 fetch("assets/fonts-in-use.json")
   .then(function (response) {
     return response.json();

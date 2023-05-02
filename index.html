@@ -16,7 +16,7 @@
   <header>
     <div class="intro">
       <h1><em>Influential</em> Type</h1>
-      <p class="body-copy">
+      <p id="statement" class="body-copy">
         These boxes display the most popular fonts of all time. The width of each box indicates the font's prevalence,
         while the
         height represents its creation date. The older the typeface, the taller the box. Simply hover over a box to
@@ -76,8 +76,14 @@
     </nav>
   </header>
   <main>
-    <div id="collectionContainer" class="collection-container"></div>
+    <div class="collection-overflow-container">
+      <div id="collectionContainer" class="collection-container" style="width:100%"></div>
+    </div>
   </main>
+
+  <div class="slidecontainer">
+    <input type="range" min="100" max="400" value="100" class="slider" id="myRange">
+  </div>
 </body>
 
 </html>
